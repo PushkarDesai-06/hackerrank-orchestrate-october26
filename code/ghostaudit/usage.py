@@ -2,19 +2,23 @@
 import json
 from pathlib import Path
 
-from .llm import PRICES, GeminiClient
+from .llm import OPENROUTER_PRICES, PRICES, GeminiClient
 
 
 def _model_summary(client: GeminiClient, requests: int, fallback: bool = False) -> dict:
     u = client.fallback_usage if fallback else client.usage
-    price_in, price_out = PRICES.get(client.model, (0.0, 0.0))
+    if fallback:
+        price_in, price_out = OPENROUTER_PRICES.get(client.openrouter_model, PRICES.get(client.model, (0.0, 0.0)))
+    else:
+        price_in, price_out = PRICES.get(client.model, (0.0, 0.0))
     billed_out = u.output_tokens + u.thinking_tokens
     cost = u.input_tokens / 1e6 * price_in + billed_out / 1e6 * price_out
     total = u.input_tokens + billed_out
     return {
-        "provider": "OpenRouter (fallback)" if fallback else "Google Gemini API",
+        "provider": "OpenRouter" if fallback else "Google Gemini API",
         "model": client.openrouter_model if fallback else client.model,
         "thinking_level": client.thinking_level,
+        "served_models": sorted(u.served_models),
         "price_per_million_usd": {"input": price_in, "output": price_out},
         "model_calls": u.calls,
         "calls_served_from_cache": u.cached_calls,

@@ -1,0 +1,121 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1623,
+  "candidatesTokenCount": 639,
+  "totalTokenCount": 4408,
+  "promptTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1092
+   },
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   }
+  ],
+  "thoughtsTokenCount": 2146,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "audit_record_003",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Audit log entry for account closure recorded event.",
+    "observed_at": "2026-08-25T04:03:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "security_service",
+    "user_id": "user_03"
+   },
+   {
+    "resource_id": "audit_record_002",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Audit log entry for session revoked event.",
+    "observed_at": "2026-08-25T03:21:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "security_service",
+    "user_id": "user_03"
+   },
+   {
+    "resource_id": "audit_record_001",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Audit log entry for recovery challenge completed event.",
+    "observed_at": "2026-08-24T16:14:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "security_service",
+    "user_id": "user_03"
+   },
+   {
+    "resource_id": "audit_record_006",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Audit log entry for email change confirmed event.",
+    "observed_at": "2026-08-22T11:27:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "security_service",
+    "user_id": "user_03"
+   },
+   {
+    "resource_id": "audit_record_005",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Audit log entry for login from new device event.",
+    "observed_at": "2026-08-20T09:42:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "security_service",
+    "user_id": "user_03"
+   },
+   {
+    "resource_id": "audit_record_004",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Audit log entry for password changed event.",
+    "observed_at": "2026-08-18T14:05:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "security_service",
+    "user_id": "user_03"
+   }
+  ]
+ }
+}

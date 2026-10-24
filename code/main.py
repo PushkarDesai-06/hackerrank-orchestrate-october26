@@ -4,9 +4,11 @@ Usage:
     python3 code/main.py                 # full run, writes ./output.csv
     python3 code/main.py --no-llm        # rules only (no Gemini calls, no image/PDF reading)
     python3 code/main.py --out path.csv  # write somewhere else
+    python3 code/main.py --provider openrouter   # send uncached calls to OpenRouter only
 """
 import argparse
 import json
+import os
 import sys
 from collections import Counter
 from pathlib import Path
@@ -23,7 +25,11 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--no-llm", action="store_true", help="skip Gemini (rule-based classification, no images)")
     ap.add_argument("--out", type=Path, default=OUTPUT_PATH)
+    ap.add_argument("--provider", choices=["auto", "gemini", "openrouter"],
+                    help="LLM route: Gemini keys then OpenRouter (auto), or force one")
     args = ap.parse_args()
+    if args.provider:
+        os.environ["LLM_PROVIDER"] = args.provider
 
     dataset = Dataset.load()
     extra = load_extra_requests(dataset)

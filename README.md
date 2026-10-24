@@ -32,6 +32,7 @@ cache present makes no API calls and reproduces the same `output.csv`.
 ```bash
 python3 code/main.py              # full run, writes ./output.csv (518 rows)
 python3 code/main.py --no-llm     # rules only: no model calls, images and PDFs are not read
+python3 code/main.py --provider openrouter   # send uncached model calls straight to OpenRouter
 python3 code/evaluation/main.py   # score against the 32 public samples and the custom cases
 ```
 
@@ -44,7 +45,8 @@ writes the token and cost summary to `code/evaluation/last_run_usage.json`.
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `GEMINI_API_KEYS` / `GEMINI_API_KEY` | none | Gemini keys. Requests start at a random key and rotate on every call. A timeout, 429 or 5xx moves to the next key immediately. |
-| `OPENROUTER_API_KEY` | none | Used only after every Gemini key has failed. |
+| `OPENROUTER_API_KEY` | none | Used only after every Gemini key has failed, unless the route is forced. |
+| `LLM_PROVIDER` (or `--provider`) | `auto` | `auto` = Gemini keys first, OpenRouter last; `openrouter` or `gemini` forces one route. |
 | `GEMINI_VISION_MODEL` | `gemini-3.6-flash` | Reads screenshots and PDFs (thinking level `medium`). |
 | `GEMINI_TEXT_MODEL` | `gemini-3.5-flash-lite` | Classifies request texts in batches of 25 (thinking level `minimal`). |
 | `OPENROUTER_VISION_MODEL` / `OPENROUTER_TEXT_MODEL` | `google/<gemini model>` | Model ids used on the fallback route. |

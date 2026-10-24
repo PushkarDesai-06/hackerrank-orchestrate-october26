@@ -1,0 +1,40 @@
+{
+ "model": "openrouter/free",
+ "provider": "openrouter",
+ "purpose": "request_classification",
+ "usage": {
+  "promptTokenCount": 247,
+  "candidatesTokenCount": 74,
+  "thoughtsTokenCount": 882,
+  "servedModel": "liquid/lfm-2.5-2.6b:free"
+ },
+ "result": {
+  "results": [
+   {
+    "id": 1,
+    "deletion": true,
+    "reason": "Customer explicitly asks to close account"
+   },
+   {
+    "id": 2,
+    "deletion": true,
+    "reason": "Explicit request to delete account and linked data"
+   },
+   {
+    "id": 3,
+    "deletion": true,
+    "reason": "Direct request to delete account"
+   },
+   {
+    "id": 4,
+    "deletion": false,
+    "reason": "Request to correct phone number, not deletion"
+   },
+   {
+    "id": 5,
+    "deletion": true,
+    "reason": "Explicit request to permanently erase account"
+   }
+  ]
+ }
+}

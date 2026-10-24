@@ -14,11 +14,15 @@ POSITIVE = [
 ]
 
 
-def rule_classify(text: str) -> bool:
+def rule_signals(text: str) -> tuple[bool, bool]:
+    """(explicit refusal of deletion, deletion vocabulary present)."""
     t = text.lower()
-    if any(re.search(p, t) for p in NEGATIVE):
-        return False
-    return any(re.search(p, t) for p in POSITIVE)
+    return any(re.search(p, t) for p in NEGATIVE), any(re.search(p, t) for p in POSITIVE)
+
+
+def rule_classify(text: str) -> bool:
+    negative, positive = rule_signals(text)
+    return positive and not negative
 
 
 PROMPT = """You review privacy requests sent to an online shop. For each numbered request decide whether the
@@ -59,10 +63,16 @@ def classify_requests(texts: list[str], client=None, batch_size: int = 25) -> tu
             return decisions, notes
         for item in reply.get("results", []):
             idx = int(item["id"]) - 1
-            if 0 <= idx < len(batch):
-                text = batch[idx]
-                llm = bool(item["deletion"])
+            if not 0 <= idx < len(batch):
+                continue
+            text = batch[idx]
+            llm = bool(item["deletion"])
+            negative, positive = rule_signals(text)
+            # An explicit refusal or explicit deletion wording is decisive; the
+            # model settles only texts where the rules see neither signal.
+            if negative or positive:
                 if llm != decisions[text]:
-                    notes.append(f"rules={decisions[text]} llm={llm}: {text[:90]}")
-                decisions[text] = llm
+                    notes.append(f"kept rules={decisions[text]} over llm={llm}: {text[:90]}")
+                continue
+            decisions[text] = llm
     return decisions, notes

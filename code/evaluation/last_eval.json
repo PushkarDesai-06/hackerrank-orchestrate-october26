@@ -2,23 +2,22 @@
   "samples": {
     "metrics": {
       "cases": 32,
-      "status_accuracy": 0.96875,
-      "step_precision": 0.9945945945945946,
-      "step_recall": 0.9533678756476683,
-      "step_f1": 0.9735449735449736,
+      "status_accuracy": 1.0,
+      "step_precision": 1.0,
+      "step_recall": 0.9740932642487047,
+      "step_f1": 0.9868766404199476,
       "field_accuracy": {
-        "phase": 0.9533678756476683,
-        "system_id": 0.9326424870466321,
-        "resource_id": 0.9326424870466321,
-        "operation": 0.9326424870466321,
-        "state": 0.9326424870466321,
-        "evidence_id": 0.9792746113989638
+        "phase": 0.9740932642487047,
+        "system_id": 0.9533678756476683,
+        "resource_id": 0.9533678756476683,
+        "operation": 0.9533678756476683,
+        "state": 0.9533678756476683,
+        "evidence_id": 0.9844559585492227
       },
-      "field_accuracy_overall": 0.9438687392055267,
-      "sequence_accuracy": 0.84375,
+      "field_accuracy_overall": 0.9620034542314335,
+      "sequence_accuracy": 0.875,
       "failures": [
         "case_04",
-        "case_07",
         "case_18",
         "case_20",
         "case_21"
@@ -48,55 +47,6 @@
           ]
         ],
         "extra": []
-      },
-      {
-        "case_id": "case_07",
-        "gold_status": "INCOMPLETE",
-        "pred_status": "COMPLETE",
-        "missing": [
-          [
-            "FINDING",
-            "support_platform",
-            "support_001",
-            "REPORT_REMAINING_RECORD",
-            "PRESENT",
-            "evidence_58"
-          ],
-          [
-            "REMEDIATION",
-            "support_platform",
-            "support_001",
-            "DELETE_RECORD",
-            "ABSENT",
-            ""
-          ],
-          [
-            "VERIFICATION",
-            "account_service",
-            "account_007",
-            "VERIFY_RECORD_ABSENT",
-            "ABSENT",
-            ""
-          ],
-          [
-            "VERIFICATION",
-            "support_platform",
-            "support_001",
-            "VERIFY_RECORD_ABSENT",
-            "ABSENT",
-            ""
-          ]
-        ],
-        "extra": [
-          [
-            "VERIFICATION",
-            "account_service",
-            "account_007",
-            "VERIFY_RECORD_ABSENT",
-            "ABSENT",
-            "evidence_54"
-          ]
-        ]
       },
       {
         "case_id": "case_18",

@@ -1,0 +1,79 @@
+{
+ "model": "openrouter/free",
+ "provider": "openrouter",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1761,
+  "candidatesTokenCount": 2018,
+  "thoughtsTokenCount": 4375,
+  "servedModel": "dots-studio/dots-3-note-preview:free"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "backup_9291",
+    "system_id": "backup_service",
+    "record_kind": "BACKUP_ARCHIVE",
+    "user_id": "",
+    "name": "",
+    "email": "bluepeakco@outlook.com",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2026-04-26T02:00:00Z",
+    "notes": "Archive backup under account bluepeakco@outlook.com, region ap-southeast-1."
+   },
+   {
+    "resource_id": "backup_9288",
+    "system_id": "backup_service",
+    "record_kind": "BACKUP_ARCHIVE",
+    "user_id": "",
+    "name": "",
+    "email": "miller.logistics@company.com",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2026-04-26T02:00:00Z",
+    "notes": "Archive backup under account miller.logistics@company.com, region us-west-2."
+   },
+   {
+    "resource_id": "backup_9287",
+    "system_id": "backup_service",
+    "record_kind": "BACKUP_ARCHIVE",
+    "user_id": "",
+    "name": "",
+    "email": "areed1433@gmail.com",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "2026-07-26",
+    "observed_at": "2026-04-26T02:00:00Z",
+    "notes": "Selected archive with detail panel showing retention end on 26 Jul 2026 and last drill on 29 Mar 2026."
+   },
+   {
+    "resource_id": "backup_9286",
+    "system_id": "backup_service",
+    "record_kind": "BACKUP_ARCHIVE",
+    "user_id": "",
+    "name": "",
+    "email": "summit-retail@company.com",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2026-04-26T02:00:00Z",
+    "notes": "Archive backup under account summit-retail@company.com, region us-east-1."
+   }
+  ]
+ }
+}

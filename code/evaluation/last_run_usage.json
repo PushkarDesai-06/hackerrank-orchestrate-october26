@@ -5,50 +5,101 @@
       "provider": "Google Gemini API",
       "model": "gemini-3.5-flash-lite",
       "thinking_level": "minimal",
+      "served_models": [],
       "price_per_million_usd": {
         "input": 0.3,
         "output": 2.5
       },
-      "model_calls": 0,
-      "calls_served_from_cache": 0,
-      "input_tokens": 0,
-      "output_tokens": 0,
+      "model_calls": 16,
+      "calls_served_from_cache": 16,
+      "input_tokens": 17552,
+      "output_tokens": 13585,
       "thinking_tokens": 0,
-      "total_tokens": 0,
-      "avg_tokens_per_request": 0.0,
-      "estimated_cost_usd": 0.0,
-      "estimated_cost_per_request_usd": 0.0,
-      "by_purpose": {}
+      "total_tokens": 31137,
+      "avg_tokens_per_request": 60.11003861003861,
+      "estimated_cost_usd": 0.039228,
+      "estimated_cost_per_request_usd": 7.573e-05,
+      "by_purpose": {
+        "request_classification": {
+          "calls": 16,
+          "cached_calls": 16,
+          "input_tokens": 17552,
+          "output_tokens": 13585,
+          "thinking_tokens": 0
+        }
+      }
     },
     {
       "provider": "Google Gemini API",
       "model": "gemini-3.6-flash",
       "thinking_level": "medium",
+      "served_models": [],
       "price_per_million_usd": {
         "input": 1.5,
         "output": 7.5
       },
-      "model_calls": 0,
-      "calls_served_from_cache": 0,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "thinking_tokens": 0,
-      "total_tokens": 0,
-      "avg_tokens_per_request": 0.0,
+      "model_calls": 8,
+      "calls_served_from_cache": 8,
+      "input_tokens": 12852,
+      "output_tokens": 3695,
+      "thinking_tokens": 18991,
+      "total_tokens": 35538,
+      "avg_tokens_per_request": 68.60617760617761,
+      "estimated_cost_usd": 0.189423,
+      "estimated_cost_per_request_usd": 0.00036568,
+      "by_purpose": {
+        "evidence_extraction": {
+          "calls": 8,
+          "cached_calls": 8,
+          "input_tokens": 12852,
+          "output_tokens": 3695,
+          "thinking_tokens": 18991
+        }
+      }
+    },
+    {
+      "provider": "OpenRouter",
+      "model": "openrouter/free",
+      "thinking_level": "medium",
+      "served_models": [
+        "dots-studio/dots-3-note-preview:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3.5-super-vl:free",
+        "recursive/flint-v1.0:free"
+      ],
+      "price_per_million_usd": {
+        "input": 0.0,
+        "output": 0.0
+      },
+      "model_calls": 7,
+      "calls_served_from_cache": 7,
+      "input_tokens": 11221,
+      "output_tokens": 6589,
+      "thinking_tokens": 31194,
+      "total_tokens": 49004,
+      "avg_tokens_per_request": 94.6023166023166,
       "estimated_cost_usd": 0.0,
       "estimated_cost_per_request_usd": 0.0,
-      "by_purpose": {}
+      "by_purpose": {
+        "evidence_extraction": {
+          "calls": 7,
+          "cached_calls": 7,
+          "input_tokens": 11221,
+          "output_tokens": 6589,
+          "thinking_tokens": 31194
+        }
+      }
     }
   ],
   "overall": {
-    "model_calls": 0,
-    "calls_served_from_cache": 0,
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "thinking_tokens": 0,
-    "total_tokens": 0,
-    "estimated_cost_usd": 0.0,
-    "avg_tokens_per_request": 0.0,
-    "estimated_cost_per_request_usd": 0.0
+    "model_calls": 31,
+    "calls_served_from_cache": 31,
+    "input_tokens": 41625,
+    "output_tokens": 23869,
+    "thinking_tokens": 50185,
+    "total_tokens": 115679,
+    "estimated_cost_usd": 0.228651,
+    "avg_tokens_per_request": 223.31853281853282,
+    "estimated_cost_per_request_usd": 0.00044141
   }
 }

@@ -1,0 +1,31 @@
+{
+ "model": "openrouter/free",
+ "provider": "openrouter",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 707,
+  "candidatesTokenCount": -731,
+  "thoughtsTokenCount": 11851,
+  "servedModel": "recursive/flint-v1.0:free"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "audit_record_003",
+    "system_id": "account_service",
+    "record_kind": "SECURITY_AUDIT_LOG",
+    "user_id": "user_03",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "2027-08-25T04:03:00Z",
+    "observed_at": "2026-08-25T04:03:00Z",
+    "notes": "Account closure recorded by automated account workflow."
+   }
+  ]
+ }
+}

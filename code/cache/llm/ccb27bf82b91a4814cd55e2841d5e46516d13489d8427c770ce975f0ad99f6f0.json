@@ -1,0 +1,47 @@
+{
+ "model": "openrouter/free",
+ "provider": "openrouter",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 911,
+  "candidatesTokenCount": 559,
+  "thoughtsTokenCount": 720,
+  "servedModel": "nvidia/nemotron-3-ultra-550b-a55b:free"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "support_001",
+    "system_id": "support_platform",
+    "record_kind": "SUPPORT_MESSAGE",
+    "user_id": "",
+    "name": "Priya Raman",
+    "email": "priya.raman@gmail.com",
+    "phone": "+91 98765 73142",
+    "other_identifiers": "order ORD-20264827, preferred contact SMS",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2026-06-18T10:24:00Z",
+    "notes": "Delivery address correction request for order ORD-20264827, change apartment number from 14B to 18B and call before delivery."
+   },
+   {
+    "resource_id": "delivery_address_correction.pdf",
+    "system_id": "support_platform",
+    "record_kind": "SUPPORT_ATTACHMENT",
+    "user_id": "",
+    "name": "Priya Raman",
+    "email": "priya.raman@gmail.com",
+    "phone": "+91 98765 73142",
+    "other_identifiers": "ticket CS-4827, region ap-south, checksum prefix c90a42",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2026-09-12T07:30:00Z",
+    "notes": "Attachment for support ticket CS-4827, uploaded by customer, 312 KB."
+   }
+  ]
+ }
+}

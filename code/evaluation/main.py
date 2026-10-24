@@ -7,6 +7,7 @@ Writes code/evaluation/last_eval.json with all metrics and per-case diffs.
 """
 import argparse
 import json
+import os
 import sys
 import tempfile
 from pathlib import Path
@@ -71,7 +72,10 @@ def show(name: str, res: dict) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-llm", action="store_true")
+    ap.add_argument("--provider", choices=["auto", "gemini", "openrouter"])
     args = ap.parse_args()
+    if args.provider:
+        os.environ["LLM_PROVIDER"] = args.provider
     use_llm = not args.no_llm
     report = {"samples": evaluate_samples(use_llm), "custom": evaluate_custom(use_llm)}
     show("public samples", report["samples"])

@@ -1,9 +1,10 @@
 """Per-case reasoning: identity, linking, state at audit_at, policy, and planning."""
+import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 
-from .evidence import EMAIL_RE, Obs, idents_from_value, norm_name, norm_phone, system_for
+from .evidence import EMAIL_RE, RESOURCE_RE, Obs, idents_from_value, norm_name, norm_phone, system_for
 from .policy import OP_STATE, PHASE_ORDER, TREATMENT, load_rules, treatment_for
 
 FAR_PAST = "0000"
@@ -90,6 +91,14 @@ class Auditor:
         self.rules = load_rules(ds.rules)
         self.coverage = coverage
         self.manifest = {m["file_id"]: m for m in ds.manifest}
+        # Artifacts sometimes print a file name or business reference instead of
+        # the internal id; catalog links ("object_19 (delivery_confirmation_19.pdf)")
+        # map those references back to resource ids.
+        aliases = self._catalog_aliases(ds.activity)
+        for o in observations:
+            if o.resource_id in aliases:
+                o.resource_id = aliases[o.resource_id]
+                o.system_id = system_for(o.resource_id)
         self.by_rid: dict[str, list[Obs]] = defaultdict(list)
         self.by_ident: dict[str, list[Obs]] = defaultdict(list)
         self.file_systems: dict[str, set] = defaultdict(set)
@@ -104,6 +113,20 @@ class Auditor:
         for ctx in self.contexts.values():
             ctx.primary_evidence = self.primary_evidence(ctx)
         self._link_workflow_activity()
+
+    @staticmethod
+    def _catalog_aliases(activity: list[dict]) -> dict[str, str]:
+        out = {}
+        for a in activity:
+            if a["event_type"] != "LINK_RESOURCE_IDENTITY":
+                continue
+            m = re.search(r"linked (\S+) \(([^)]+)\)|confirmed (\S+) \(([^)]+)\)", a["details"])
+            if not m:
+                continue
+            rid, ref = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
+            if ref != rid:
+                out[ref] = rid
+        return out
 
     # ------------------------------------------------------------ identity
 
@@ -451,7 +474,9 @@ class Auditor:
 
     def plan(self, case_id: str) -> tuple[str, list[dict], list[ResourceView]]:
         ctx = self.contexts[case_id]
-        views = [self.view(ctx, rid) for rid in sorted(ctx.resources)]
+        # Only internal resource ids can be acted on; printed references that
+        # no catalog link resolves (file names, order numbers) stay as context.
+        views = [self.view(ctx, rid) for rid in sorted(ctx.resources) if RESOURCE_RE.fullmatch(rid)]
         findings, remediation, verification = [], [], []
         for v in views:
             treat = treatment_for(v.category, self.rules)

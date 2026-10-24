@@ -151,3 +151,102 @@ branch=main
 repo_root=/home/cryo/Code/hackathons/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-24T17:26:33Z] Review finished Gemini run and fix classifier precedence
+
+User Prompt (verbatim, secrets redacted):
+(no user message; background Gemini run completed notification)
+
+Agent Response Summary:
+The full run classified all request texts (16 calls on gemini-3.5-flash-lite) but extracted only 8 of 15 images/PDFs on gemini-3.6-flash; 7 failed on 503 high demand and 429 quota exhaustion of the single key. The lite model mislabeled two sample follow-up deletion requests as non-deletion, dropping sample status accuracy to 90.6%, so rules are now decisive whenever they see explicit refusal or deletion wording and the model only settles the remaining texts. Sample metrics are back to status 96.9%, step F1 0.974, sequence 84.4%; custom cases 100%. Not committed yet; waiting on more keys/quota to finish the 7 extractions before writing reports.
+
+Actions:
+* Edited code/ghostaudit/classify.py (rule_signals, precedence)
+* Ran python3 code/evaluation/main.py
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/cryo/Code/hackathons/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T17:28:09Z] Add forced OpenRouter route for remaining extractions
+
+User Prompt (verbatim, secrets redacted):
+added one more gemini key but run it directly on the openrouter
+
+Agent Response Summary:
+Added LLM_PROVIDER / --provider (auto, gemini, openrouter) so uncached calls can be sent straight to OpenRouter, and OpenRouter-specific pricing for the usage report. Verified via OpenRouter's public models list that google/gemini-3.6-flash and google/gemini-3.5-flash-lite exist. A forced run reused all 24 cached responses but could not extract the 7 remaining images/PDFs because .env contains no OPENROUTER_API_KEY (and only one GEMINI_API_KEY line), so the user was asked to add it.
+
+Actions:
+* Edited code/ghostaudit/llm.py, code/ghostaudit/usage.py, code/main.py, code/evaluation/main.py, README.md
+* Queried https://openrouter.ai/api/v1/models; ran python3 code/main.py --provider openrouter
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/cryo/Code/hackathons/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T17:29:54Z] Run remaining extractions through OpenRouter
+
+User Prompt (verbatim, secrets redacted):
+added the openrouter key, run it
+
+Agent Response Summary:
+Ran python3 code/main.py --provider openrouter. All 24 cached responses were reused, but every one of the 7 remaining image/PDF extractions was rejected by OpenRouter with HTTP 401 "API key expired", so no new extractions were made and output.csv is unchanged (351 INCOMPLETE, 157 COMPLETE, 10 NOT_APPLICABLE). Asked the user for a valid OpenRouter key or a fresh Gemini quota.
+
+Actions:
+* Ran python3 code/main.py --provider openrouter
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/cryo/Code/hackathons/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T17:43:43Z] Finish extractions via openrouter/free and write reports
+
+User Prompt (verbatim, secrets redacted):
+change the model to openrouter/free and try again i added a fresh key
+
+Agent Response Summary:
+Set OPENROUTER_VISION_MODEL/OPENROUTER_TEXT_MODEL to openrouter/free, recorded the concrete model OpenRouter serves, and added tolerant JSON parsing with up to 3 retries. All 7 remaining images/PDFs were extracted. Reviewing them led to fixes: catalog-link aliases map printed references to resource ids, support records read from a PDF are attachments, vision records use capture time, and only real resource ids become steps. Final sample score: status 1.000, step precision 1.000, recall 0.974, F1 0.987, sequence 0.875; custom cases 5/5. Wrote code/evaluation/evaluation_report.md and usage_report.md (31 calls, 115,679 tokens, about USD 0.23). Not pushed; asked the user first.
+
+Actions:
+* Edited code/ghostaudit/{llm,usage,vision,auditor}.py; appended model lines to .env (no secrets logged)
+* Ran python3 code/main.py --provider openrouter, python3 code/main.py, python3 code/evaluation/main.py
+* Created code/evaluation/evaluation_report.md, code/evaluation/usage_report.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/cryo/Code/hackathons/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T17:45:05Z] Push final output and reports to the fork
+
+User Prompt (verbatim, secrets redacted):
+yeah push it
+
+Agent Response Summary:
+Re-scanned the tree for API keys (none outside the gitignored .env), committed the final output.csv, evaluation and usage reports, classifier/vision/linking fixes, OpenRouter routing, new cache entries and log, and pushed main to the fork.
+
+Actions:
+* git add -A; git commit; git push fork main
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=/home/cryo/Code/hackathons/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

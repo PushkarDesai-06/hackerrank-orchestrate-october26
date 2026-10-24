@@ -88,12 +88,16 @@ class VisionExtractor:
                 attrs["restore_allowed"] = rec["restore_allowed"]
             if rec.get("retain_until"):
                 attrs["retention_until"] = rec["retain_until"]
+            if mime == "application/pdf" and rid.startswith("support_"):
+                # A support record read from a PDF document is that uploaded attachment.
+                attrs["record_type"] = "SUPPORT_ATTACHMENT"
             system = rec.get("system_id") or system_for(rid)
             if system_for(rid) != "unknown":
                 system = system_for(rid)
-            when = rec.get("observed_at") or captured_at
-            if when > captured_at or len(when) < 10:
-                when = captured_at
+            # Printed dates describe business events; the artifact shows state as of capture.
+            if rec.get("observed_at"):
+                attrs["printed_at"] = rec["observed_at"]
+            when = captured_at
             out.append(_finish(Obs(
                 evidence_id=evidence_id, captured_at=captured_at, observed_at=when, system_id=system,
                 resource_id=rid, state=_state_from(attrs, "PRESENT"), attrs=attrs,

@@ -1,0 +1,45 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1611,
+  "candidatesTokenCount": 133,
+  "totalTokenCount": 4764,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1080
+   }
+  ],
+  "thoughtsTokenCount": 3020,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "support_1034",
+    "state": "PRESENT",
+    "email": "kagyeman8947@fastmail.com",
+    "enabled": null,
+    "name": "Kofi Agyeman",
+    "notes": "Support ticket CS-5034 submitted by Kofi Agyeman regarding order delivery status.",
+    "observed_at": "",
+    "other_identifiers": [
+     "Maya Chen",
+     "ORD-20265034",
+     "SWF-884103"
+    ],
+    "phone": "",
+    "record_kind": "SUPPORT_MESSAGE",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "support_platform",
+    "user_id": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "model": "openrouter/free",
+ "provider": "openrouter",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 2541,
+  "candidatesTokenCount": 611,
+  "thoughtsTokenCount": 4383,
+  "servedModel": "nvidia/nemotron-3.5-super-vl:free"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "user_17",
+    "system_id": "account_service",
+    "record_kind": "USER_PROFILE",
+    "user_id": "user_17",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2026-03-10T07:18:00Z",
+    "notes": "Customer key retained reference for Account Platform eu-west."
+   },
+   {
+    "resource_id": "ORD-20263245",
+    "system_id": "",
+    "record_kind": "OTHER",
+    "user_id": "",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2024-01-11T08:45:00Z",
+    "notes": "Order record linked to customer."
+   },
+   {
+    "resource_id": "CS-3245",
+    "system_id": "support_platform",
+    "record_kind": "SUPPORT_MESSAGE",
+    "user_id": "",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2024-02-14T12:16:00Z",
+    "notes": "Support case linked to customer."
+   },
+   {
+    "resource_id": "CS-3378",
+    "system_id": "support_platform",
+    "record_kind": "SUPPORT_MESSAGE",
+    "user_id": "",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2024-06-03T09:27:00Z",
+    "notes": "Support case linked to customer."
+   },
+   {
+    "resource_id": "FIN-7742",
+    "system_id": "",
+    "record_kind": "OTHER",
+    "user_id": "",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "other_identifiers": "",
+    "state": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "retain_until": "",
+    "observed_at": "2024-08-22T15:03:00Z",
+    "notes": "Finance record linked to customer."
+   }
+  ]
+ }
+}
