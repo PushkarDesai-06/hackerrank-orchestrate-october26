@@ -1,0 +1,89 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1623,
+  "candidatesTokenCount": 500,
+  "totalTokenCount": 4063,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1092
+   }
+  ],
+  "thoughtsTokenCount": 1940,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "export_1261",
+    "state": "PRESENT",
+    "email": "marcus.lee@northstar.shop",
+    "enabled": null,
+    "name": "",
+    "notes": "Data export archive customer_export_1261.zip is currently collecting data.",
+    "observed_at": "2026-06-20T14:18:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "USER_EXPORT",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "export_service",
+    "user_id": ""
+   },
+   {
+    "resource_id": "export_1260",
+    "state": "PRESENT",
+    "email": "ingrid.dahl@outlook.com",
+    "enabled": null,
+    "name": "",
+    "notes": "Data export archive customer_export_1260.zip contains profile, orders, and saved addresses data.",
+    "observed_at": "2026-06-18T06:42:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "USER_EXPORT",
+    "restore_allowed": null,
+    "retain_until": "2026-06-25T06:42:00Z",
+    "system_id": "export_service",
+    "user_id": ""
+   },
+   {
+    "resource_id": "export_1259",
+    "state": "PRESENT",
+    "email": "sara.kim@northstar.shop",
+    "enabled": null,
+    "name": "",
+    "notes": "Data export archive customer_export_1259.zip is currently packaging.",
+    "observed_at": "2026-06-17T11:03:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "USER_EXPORT",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "export_service",
+    "user_id": ""
+   },
+   {
+    "resource_id": "export_1258",
+    "state": "PRESENT",
+    "email": "daniel.park@northstar.shop",
+    "enabled": null,
+    "name": "",
+    "notes": "Data export archive customer_export_1258.zip is ready for download.",
+    "observed_at": "2026-06-16T09:27:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "USER_EXPORT",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "export_service",
+    "user_id": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,145 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "request_classification",
+ "usage": {
+  "promptTokenCount": 1187,
+  "candidatesTokenCount": 1004,
+  "totalTokenCount": 2191,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1187
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "result": {
+  "results": [
+   {
+    "id": 1,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 2,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 3,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 4,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 5,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 6,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 7,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 8,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 9,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 10,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 11,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 12,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 13,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 14,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 15,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 16,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 17,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 18,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 19,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 20,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 21,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 22,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 23,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 24,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   },
+   {
+    "id": 25,
+    "deletion": true,
+    "reason": "Explicitly requests to delete the account and its personal data."
+   }
+  ]
+ }
+}

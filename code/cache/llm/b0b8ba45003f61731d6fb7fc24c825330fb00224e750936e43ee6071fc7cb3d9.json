@@ -1,0 +1,43 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1595,
+  "candidatesTokenCount": 120,
+  "totalTokenCount": 4225,
+  "promptTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1064
+   },
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   }
+  ],
+  "thoughtsTokenCount": 2510,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "NST-2026-0718-1842",
+    "state": "PRESENT",
+    "email": "ingrid.dahl@outlook.com",
+    "enabled": null,
+    "name": "Ingrid Dahl",
+    "notes": "Customer statement for purchase of a smart desk lamp delivered to Trondheim, Norway.",
+    "observed_at": "",
+    "other_identifiers": [
+     "ORD-20261260"
+    ],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "",
+    "user_id": "user_18"
+   }
+  ]
+ }
+}

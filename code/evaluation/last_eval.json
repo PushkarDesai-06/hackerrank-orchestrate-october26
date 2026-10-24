@@ -1,0 +1,172 @@
+{
+  "samples": {
+    "metrics": {
+      "cases": 32,
+      "status_accuracy": 0.96875,
+      "step_precision": 0.9945945945945946,
+      "step_recall": 0.9533678756476683,
+      "step_f1": 0.9735449735449736,
+      "field_accuracy": {
+        "phase": 0.9533678756476683,
+        "system_id": 0.9326424870466321,
+        "resource_id": 0.9326424870466321,
+        "operation": 0.9326424870466321,
+        "state": 0.9326424870466321,
+        "evidence_id": 0.9792746113989638
+      },
+      "field_accuracy_overall": 0.9438687392055267,
+      "sequence_accuracy": 0.84375,
+      "failures": [
+        "case_04",
+        "case_07",
+        "case_18",
+        "case_20",
+        "case_21"
+      ]
+    },
+    "diffs": [
+      {
+        "case_id": "case_04",
+        "gold_status": "COMPLETE",
+        "pred_status": "COMPLETE",
+        "missing": [
+          [
+            "VERIFICATION",
+            "account_service",
+            "account_004",
+            "VERIFY_RECORD_ABSENT",
+            "ABSENT",
+            "evidence_54"
+          ],
+          [
+            "VERIFICATION",
+            "analytics_platform",
+            "analytics_901",
+            "VERIFY_RECORD_ANONYMIZED",
+            "ANONYMIZED",
+            "evidence_56"
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "case_id": "case_07",
+        "gold_status": "INCOMPLETE",
+        "pred_status": "COMPLETE",
+        "missing": [
+          [
+            "FINDING",
+            "support_platform",
+            "support_001",
+            "REPORT_REMAINING_RECORD",
+            "PRESENT",
+            "evidence_58"
+          ],
+          [
+            "REMEDIATION",
+            "support_platform",
+            "support_001",
+            "DELETE_RECORD",
+            "ABSENT",
+            ""
+          ],
+          [
+            "VERIFICATION",
+            "account_service",
+            "account_007",
+            "VERIFY_RECORD_ABSENT",
+            "ABSENT",
+            ""
+          ],
+          [
+            "VERIFICATION",
+            "support_platform",
+            "support_001",
+            "VERIFY_RECORD_ABSENT",
+            "ABSENT",
+            ""
+          ]
+        ],
+        "extra": [
+          [
+            "VERIFICATION",
+            "account_service",
+            "account_007",
+            "VERIFY_RECORD_ABSENT",
+            "ABSENT",
+            "evidence_54"
+          ]
+        ]
+      },
+      {
+        "case_id": "case_18",
+        "gold_status": "INCOMPLETE",
+        "pred_status": "INCOMPLETE",
+        "missing": [
+          [
+            "VERIFICATION",
+            "security_service",
+            "audit_record_6645",
+            "VERIFY_RECORD_PRESENT",
+            "PRESENT",
+            ""
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "case_id": "case_20",
+        "gold_status": "INCOMPLETE",
+        "pred_status": "INCOMPLETE",
+        "missing": [
+          [
+            "VERIFICATION",
+            "security_service",
+            "audit_record_5569",
+            "VERIFY_RECORD_PRESENT",
+            "PRESENT",
+            ""
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "case_id": "case_21",
+        "gold_status": "COMPLETE",
+        "pred_status": "COMPLETE",
+        "missing": [
+          [
+            "VERIFICATION",
+            "analytics_platform",
+            "analytics_5335",
+            "VERIFY_RECORD_ANONYMIZED",
+            "ANONYMIZED",
+            "evidence_92"
+          ]
+        ],
+        "extra": []
+      }
+    ]
+  },
+  "custom": {
+    "metrics": {
+      "cases": 5,
+      "status_accuracy": 1.0,
+      "step_precision": 1.0,
+      "step_recall": 1.0,
+      "step_f1": 1.0,
+      "field_accuracy": {
+        "phase": 1.0,
+        "system_id": 1.0,
+        "resource_id": 1.0,
+        "operation": 1.0,
+        "state": 1.0,
+        "evidence_id": 1.0
+      },
+      "field_accuracy_overall": 1.0,
+      "sequence_accuracy": 1.0,
+      "failures": []
+    },
+    "diffs": []
+  }
+}

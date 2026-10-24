@@ -1,0 +1,91 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1611,
+  "candidatesTokenCount": 743,
+  "totalTokenCount": 6505,
+  "promptTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1080
+   },
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   }
+  ],
+  "thoughtsTokenCount": 4151,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "account_5762",
+    "state": "PRESENT",
+    "email": "haruka.s1838@zoho.com",
+    "enabled": null,
+    "name": "Haruka Sato",
+    "notes": "Customer profile for Silver tier user signed up via mobile_app in Japan.",
+    "observed_at": "2026-09-24T09:14:00+09:00",
+    "other_identifiers": [],
+    "phone": "+81 90 7610 2507",
+    "record_kind": "USER_PROFILE",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "account_service",
+    "user_id": "user_11"
+   },
+   {
+    "resource_id": "support_9538",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "Haruka Sato",
+    "notes": "Support case CS-8538 created on 28 Aug 2026 with last customer reply on 24 Sep 2026.",
+    "observed_at": "2026-09-24T09:14:00+09:00",
+    "other_identifiers": [
+     "CS-8538"
+    ],
+    "phone": "",
+    "record_kind": "SUPPORT_MESSAGE",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "support_platform",
+    "user_id": "user_11"
+   },
+   {
+    "resource_id": "ORD-20265762",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "Haruka Sato",
+    "notes": "Order for Ceramic coffee set delivered on 18 Sep 2026.",
+    "observed_at": "2026-09-18",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "",
+    "user_id": "user_11"
+   },
+   {
+    "resource_id": "ORD-20265518",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "Haruka Sato",
+    "notes": "Order for Travel backpack returned on 03 Sep 2026.",
+    "observed_at": "2026-09-03",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "",
+    "user_id": "user_11"
+   }
+  ]
+ }
+}

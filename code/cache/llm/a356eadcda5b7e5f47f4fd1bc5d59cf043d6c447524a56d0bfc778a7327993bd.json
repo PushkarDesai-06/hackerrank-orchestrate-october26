@@ -1,0 +1,135 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "request_classification",
+ "usage": {
+  "promptTokenCount": 1029,
+  "candidatesTokenCount": 875,
+  "totalTokenCount": 1904,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1029
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "result": {
+  "results": [
+   {
+    "id": 1,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion and handling of copies."
+   },
+   {
+    "id": 2,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 3,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 4,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 5,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 6,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 7,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 8,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 9,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion and personal-data deletion procedure."
+   },
+   {
+    "id": 10,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 11,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 12,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 13,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion."
+   },
+   {
+    "id": 14,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion and data deletion."
+   },
+   {
+    "id": 15,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion and data deletion."
+   },
+   {
+    "id": 16,
+    "deletion": true,
+    "reason": "Request explicitly asks for permanent account deletion and data deletion."
+   },
+   {
+    "id": 17,
+    "deletion": true,
+    "reason": "Customer requests permanent account exclusion in Portuguese."
+   },
+   {
+    "id": 18,
+    "deletion": true,
+    "reason": "Customer requests permanent account elimination in Spanish."
+   },
+   {
+    "id": 19,
+    "deletion": true,
+    "reason": "Customer requests removal of remaining personal details from an already deleted account."
+   },
+   {
+    "id": 20,
+    "deletion": false,
+    "reason": "Request is solely for updating a phone number and keeping the account active."
+   },
+   {
+    "id": 21,
+    "deletion": false,
+    "reason": "Request is a status check on a previous deletion, not a new deletion or formal follow-up on processing."
+   },
+   {
+    "id": 22,
+    "deletion": true,
+    "reason": "Customer requests complete account deletion in Japanese."
+   },
+   {
+    "id": 23,
+    "deletion": true,
+    "reason": "Customer requests permanent account deletion in Korean."
+   }
+  ]
+ }
+}

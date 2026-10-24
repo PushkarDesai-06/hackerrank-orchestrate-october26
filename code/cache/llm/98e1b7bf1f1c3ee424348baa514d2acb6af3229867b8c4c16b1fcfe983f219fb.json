@@ -1,0 +1,145 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "request_classification",
+ "usage": {
+  "promptTokenCount": 1073,
+  "candidatesTokenCount": 897,
+  "totalTokenCount": 1970,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1073
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "result": {
+  "results": [
+   {
+    "id": 1,
+    "deletion": true,
+    "reason": "Explicit request for permanent account-deletion."
+   },
+   {
+    "id": 2,
+    "deletion": true,
+    "reason": "Explicit request for permanent account-deletion."
+   },
+   {
+    "id": 3,
+    "deletion": false,
+    "reason": "Request is only for marketing list removal, not account deletion."
+   },
+   {
+    "id": 4,
+    "deletion": true,
+    "reason": "Request asks to remove profile and personal details from conversations."
+   },
+   {
+    "id": 5,
+    "deletion": false,
+    "reason": "Customer explicitly states they are not asking for deletion and still need the account."
+   },
+   {
+    "id": 6,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 7,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 8,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 9,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 10,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 11,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 12,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 13,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 14,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 15,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 16,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 17,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 18,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 19,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 20,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 21,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 22,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 23,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 24,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   },
+   {
+    "id": 25,
+    "deletion": true,
+    "reason": "Explicit request for permanent account deletion."
+   }
+  ]
+ }
+}

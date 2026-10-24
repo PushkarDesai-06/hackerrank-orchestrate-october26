@@ -1,0 +1,89 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1597,
+  "candidatesTokenCount": 429,
+  "totalTokenCount": 4291,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1066
+   }
+  ],
+  "thoughtsTokenCount": 2265,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "data_flow_1121",
+    "state": "PRESENT",
+    "email": "jain.aditi@gmail.com",
+    "enabled": true,
+    "name": "",
+    "notes": "Continuous sync connector owned by Data Platform sending data to customer_analytics_warehouse.",
+    "observed_at": "2026-08-07T07:59:42Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "DATA_FLOW",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "integration_service",
+    "user_id": ""
+   },
+   {
+    "resource_id": "data_flow_9846",
+    "state": "PRESENT",
+    "email": "lucia-torres@gmail.com",
+    "enabled": true,
+    "name": "",
+    "notes": "Continuous sync connector sending data to customer_analytics_warehouse.",
+    "observed_at": "2026-08-07T07:59:36Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "DATA_FLOW",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "integration_service",
+    "user_id": ""
+   },
+   {
+    "resource_id": "Order notifications",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": true,
+    "name": "",
+    "notes": "Continuous sync connector routing order events to notification_service.",
+    "observed_at": "2026-08-07T07:59:28Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "DATA_FLOW",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "integration_service",
+    "user_id": ""
+   },
+   {
+    "resource_id": "Delivery tracking",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": true,
+    "name": "",
+    "notes": "Continuous sync connector routing shipment events to logistics_warehouse.",
+    "observed_at": "2026-08-07T07:59:13Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "DATA_FLOW",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "integration_service",
+    "user_id": ""
+   }
+  ]
+ }
+}

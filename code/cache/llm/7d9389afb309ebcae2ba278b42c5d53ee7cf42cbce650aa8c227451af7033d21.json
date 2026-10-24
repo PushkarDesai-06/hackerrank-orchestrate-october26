@@ -1,0 +1,145 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "request_classification",
+ "usage": {
+  "promptTokenCount": 1096,
+  "candidatesTokenCount": 646,
+  "totalTokenCount": 1742,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1096
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "result": {
+  "results": [
+   {
+    "id": 1,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 2,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 3,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 4,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 5,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 6,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 7,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 8,
+    "deletion": true,
+    "reason": "Request asks for the deletion process for the account"
+   },
+   {
+    "id": 9,
+    "deletion": false,
+    "reason": "Request is for changing the email address, not deletion"
+   },
+   {
+    "id": 10,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 11,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 12,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 13,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 14,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 15,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 16,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 17,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 18,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 19,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 20,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 21,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 22,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 23,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 24,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   },
+   {
+    "id": 25,
+    "deletion": true,
+    "reason": "Request asks to close account and delete personal data"
+   }
+  ]
+ }
+}

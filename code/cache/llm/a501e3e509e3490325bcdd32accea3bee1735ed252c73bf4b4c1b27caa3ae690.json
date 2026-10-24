@@ -1,0 +1,41 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1597,
+  "candidatesTokenCount": 126,
+  "totalTokenCount": 2823,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1066
+   }
+  ],
+  "thoughtsTokenCount": 1100,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "analytics_7438",
+    "state": "PRESENT",
+    "email": "darwish.omar@icloud.com",
+    "enabled": null,
+    "name": "Omar Darwish",
+    "notes": "Analytics profile for returning shopper Omar Darwish in market AE.",
+    "observed_at": "2026-07-13T14:22:00Z",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "ANALYTICS_PROFILE",
+    "restore_allowed": null,
+    "retain_until": "",
+    "system_id": "analytics_platform",
+    "user_id": "user_20"
+   }
+  ]
+ }
+}

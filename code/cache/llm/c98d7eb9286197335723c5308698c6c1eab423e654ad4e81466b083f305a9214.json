@@ -1,0 +1,121 @@
+{
+ "model": "gemini-3.6-flash",
+ "purpose": "evidence_extraction",
+ "usage": {
+  "promptTokenCount": 1595,
+  "candidatesTokenCount": 1005,
+  "totalTokenCount": 4459,
+  "promptTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1064
+   },
+   {
+    "modality": "TEXT",
+    "tokenCount": 531
+   }
+  ],
+  "thoughtsTokenCount": 1859,
+  "serviceTier": "standard"
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "ORD-20264118",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Card dispute record for USD 184.20 assigned to AR.",
+    "observed_at": "2026-05-04",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "2033-05-04",
+    "system_id": "",
+    "user_id": "user_08"
+   },
+   {
+    "resource_id": "ORD-20264207",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Tax correction record for EUR 72.40 assigned to ML.",
+    "observed_at": "2026-05-09",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "2033-05-09",
+    "system_id": "",
+    "user_id": "user_12"
+   },
+   {
+    "resource_id": "ORD-20264319",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Chargeback record for GBP 219.00 assigned to SK.",
+    "observed_at": "2026-05-14",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "2033-05-14",
+    "system_id": "",
+    "user_id": "user_17"
+   },
+   {
+    "resource_id": "ORD-20264402",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Invoice inquiry record for CAD 96.55 assigned to AR.",
+    "observed_at": "2026-05-18",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "2033-05-18",
+    "system_id": "",
+    "user_id": "user_21"
+   },
+   {
+    "resource_id": "ORD-20264511",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Card dispute record for AUD 311.80 assigned to ML.",
+    "observed_at": "2026-05-23",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "2033-05-23",
+    "system_id": "",
+    "user_id": "user_24"
+   },
+   {
+    "resource_id": "ORD-20264600",
+    "state": "PRESENT",
+    "email": "",
+    "enabled": null,
+    "name": "",
+    "notes": "Tax record for USD 48.75 assigned to SK.",
+    "observed_at": "2026-05-28",
+    "other_identifiers": [],
+    "phone": "",
+    "record_kind": "OTHER",
+    "restore_allowed": null,
+    "retain_until": "2033-05-28",
+    "system_id": "",
+    "user_id": "user_29"
+   }
+  ]
+ }
+}
